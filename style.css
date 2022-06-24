@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "belleza";
+  height: 100vh;
+}
+header {
+  background-color: #131313;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+.logo {
+  height: 50px;
+  width: 47px;
+  flex: 2.5;
+  margin-left: 10%;
+}
+.logo img:hover {
+  filter: drop-shadow(0px 0px 25px rgb(212, 0, 212));
+  cursor: pointer;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  margin-right: 10%;
+  list-style-type: none;
+}
+header a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  padding: 10px;
+}
+header ul li a:hover {
+  padding: 3px 10px;
+  background: rgb(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 2px;
+}
+.homeContainer {
+  display: grid;
+  grid-template-columns: 10% 1fr 2fr 1fr 10%;
+  grid-template-rows: 20% 80%;
+  align-items: center;
+  justify-items: center;
+  background: radial-gradient(#4b4b4b, #131313);
+  height: 70vh;
+}
+.homeContainer h1 {
+  grid-column: 2/3;
+  font-size: 4rem;
+  color: white;
+  font-family: "Playfair Display";
+}
+.homeContainer img {
+  width: 50vh;
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.homeContainer p {
+  color: white;
+  grid-column: 4/5;
+  grid-row: 2/3;
+  font-size: 1.8rem;
+}
+footer {
+  background-color: #131313;
+  height: 20vh;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer li {
+  list-style-type: none;
+  padding-bottom: 0.5rem;
+}
+.socialMedia,
+.termsList {
+  font-size: 1rem;
+}
+.socialMedia p,
+.termsList p {
+  margin-bottom: 10px;
+  color: gray;
+}
+#trademark {
+  color: gray;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Specs page -------------*/
+
+.specsContainer {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 1fr 1fr 10%;
+  grid-template-rows: 2fr 1fr;
+}
+.specsContainer th {
+  color: rgb(128, 0, 128);
+  font-weight: bold;
+}
+.specsContainer td {
+  color: cyan;
+}
+.phoneFront {
+  grid-column: 2/3;
+  margin: 50px auto;
+}
+.phoneBack {
+  grid-column: 4/5;
+  margin: 50px auto;
+}
+.specsI {
+  grid-column: 3/4;
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+.specsII {
+  grid-column: 5/6;
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+.specsContainer p {
+  flex: 1;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-size: 1.5rem;
+  color: white;
+}
+.appsIcon {
+  grid-column: 3/6;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+}
+.appsIcon img {
+  height: 3rem;
+  padding-right: 25px;
+}
+
+/* Contact page ----------- */
+
+.contactContainer {
+  background-image: url("wall2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  width: 70vh;
+  height: 50vh;
+  border-radius: 25px;
+  background-color: rgb(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+form h1 {
+  text-align: center;
+  margin-bottom: 5%;
+  color: white;
+  font-family: "Montserrat";
+  font-size: 2.5rem;
+}
+.fields {
+  width: 70%;
+  height: 10%;
+  margin: auto;
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding-left: 20px;
+  font-family: "Roboto Mono";
+  letter-spacing: 1px;
+}
+#message {
+  height: 120px;
+  resize: none;
+}
+#submit {
+  height: 4vh;
+  width: 20vh;
+  margin: auto;
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-size: 15px;
+}
+#submit:hover {
+  background-color: gainsboro;
+  cursor: pointer;
+}
+
+/* responsive ------ */
+/* home page */
+@media only screen and (max-width: 1000px) {
+  .homeContainer {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  .homeContainer h1 {
+    grid-column: 1/2;
+  }
+  .homeContainer img {
+    grid-column: 2/3;
+  }
+  .homeContainer p {
+    grid-column: 3/4;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .homeContainer {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .homeContainer h1,
+  .homeContainer img,
+  .homeContainer p {
+    margin: 10% 0;
+  }
+  #trademark {
+    display: none;
+  }
+}
+
+/* specs page */
+
+@media only screen and (max-width: 1000px) {
+  .specsContainer p {
+    display: none;
+  }
+  .appsIcon {
+    display: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .specsContainer {
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 5%;
+    grid-template-rows: 1fr 1fr;
+  }
+  .phoneFront {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .specsI {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .phoneBack {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .specsII {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+}
